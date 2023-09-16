@@ -8,3 +8,4 @@ For Macbook M1 users, you might get below error while installing "yfinance": Cou
 The lxml package seems to cause such errors when Xcode Command Line Tools are not correctly installed or some paths are missing/broken. 
 As implied in your terminal, please try: xcode-select --install, and then run this: pip install lxml.
 
+*Solution introduced by bkaankuguoglu
