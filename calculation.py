@@ -102,7 +102,7 @@ def get_skew(Return):
     mean = Return.mean()
     a = 0
     for i in range(len(Return)):
-        a = a + ((Return[i] - mean) / get_var(Return)) ** 3
+        a = a + ((Return[i] - mean) / np.sqrt(get_var(Return))) ** 3
     skew = a / (len(Return) - 1)
     return skew
 
@@ -111,7 +111,7 @@ def get_kurtosis(Return):
     mean = Return.mean()
     b = 0
     for i in range(len(Return)):
-        b = b + ((Return[i] - mean) / get_var(Return)) ** 4
+        b = b + ((Return[i] - mean) / np.sqrt(get_var(Return))) ** 4
     kurtosis = b / (len(Return) - 1)
     return kurtosis
 
