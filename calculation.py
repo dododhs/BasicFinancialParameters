@@ -18,6 +18,8 @@ def result_summary(ticker, startDate, endDate):
     market_returns[1]=market_returns[1].drop(0)
     market_returns[2]=market_returns[2].drop(0)
 
+    data = data.drop(0)
+    market = market.drop(0)
     daily = get_result(data['Return'], market['Return'], 250)
     weekly = get_result(returns[0]['Return'], market_returns[0]['Return'], 52)
     monthly = get_result(returns[1]['Return'], market_returns[1]['Return'], 12)
@@ -75,7 +77,7 @@ def get_return_series(Price, IsYearEnd, IsMonthEnd, IsWeekEnd):
 # return a list that contains three dataframes: W/M/Y return
 
 def get_result(Return, market_return, factor):
-    Number = len(Return)
+    Number = len(Return)+1
     ExpReturn = Return.mean()
     AExpReturn = (1 + ExpReturn) ** factor - 1
     Var = get_var(Return)
