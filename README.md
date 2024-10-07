@@ -9,10 +9,3 @@ The lxml package seems to cause such errors when Xcode Command Line Tools are no
 As implied in your terminal, please try: xcode-select --install, and then run this: pip install lxml.
 
 *Solution introduced by bkaankuguoglu
-
-** Background information: Xcode
-XCode, Apple’s proprietary Integrated Development Environment (IDE), is akin to the construction site and tools, specifically designed for erecting structures within the Apple ecosystem. It’s a comprehensive suite that facilitates the development, testing, and debugging of software for macOS, iOS, WatchOS, and tvOS. 
-
-Now, imagine being tasked to build a skyscraper (an application) on an Apple construction site (XCode) using a Python blueprint (Python script). This combination allows developers to leverage the robustness of XCode’s tools and the flexibility of Python, creating a unique structure that is both sturdy (runs smoothly on Apple platforms) and versatile (utilizes the power of Python).
-
-By using Python in XCode, they can develop applications that run smoothly on Apple platforms while harnessing the power of Python.
